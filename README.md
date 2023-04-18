@@ -3,7 +3,7 @@ A sample VComponent based web component to test delivery via npm
 
 ## Installation and use
 
-_npm install oraclejet-demo-card_
+_npm install oraclejet-demo-card-vdom_
 
 Add the following to the HTML view that you want to load the card into.
 
