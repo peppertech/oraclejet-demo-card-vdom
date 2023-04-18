@@ -1,0 +1,108 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   oraclejet-demo-card-vdom .oraclejet-demo-card-vdom-value-text {
+   color: var(--oraclejet-demo-card-vdom-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+oraclejet-demo-card-vdom:not(.oj-complete) {
+  visibility: hidden;
+}
+
+oraclejet-demo-card-vdom {
+  display: block;
+  width: 16rem;
+  height: 16rem;
+  perspective: 800px;
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+oraclejet-demo-card-vdom[hidden] {
+  display: none;
+}
+
+oraclejet-demo-card-vdom:hover {
+  transform: scale(1.02);
+}
+
+oraclejet-demo-card-vdom .oraclejet-demo-card-flip-container:hover {
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+oraclejet-demo-card-vdom h2,
+oraclejet-demo-card-vdom h5,
+oraclejet-demo-card-vdom .oraclejet-demo-card-text,
+oraclejet-demo-card-vdom .oraclejet-demo-card-avatar {
+  color: #fff;
+  padding: 0;
+}
+
+/* To ensure your classes are scoped correctly, we recommend scoping classes and prefixing class names with the composite name. */
+oraclejet-demo-card-vdom .oraclejet-demo-card-front-side,
+oraclejet-demo-card-vdom .oraclejet-demo-card-back-side {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  border-radius: 5px;
+  background-color: rgb(38, 125, 179);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+oraclejet-demo-card-vdom .oraclejet-demo-card-front-side {
+  /* Specify a background-image url to provide an image for the front of the card. */
+  text-align: center;
+  padding-top: 30px;
+  transform: rotateY(0deg);
+  z-index: 0;
+}
+
+oraclejet-demo-card-vdom .oraclejet-demo-card-back-side {
+  padding-left: 15px;
+  padding-right: 15px;
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+
+.oraclejet-demo-card-inner-back-side h2.oj-typography-heading-md {
+  margin-top: 5px;
+}
+
+oraclejet-demo-card-vdom .oraclejet-demo-card-inner-back-side {
+  /* IE11 workaround to show back side */
+  -ms-transform: rotateY(180deg);
+}
+
+oraclejet-demo-card-vdom .oraclejet-demo-card-flip-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+oraclejet-demo-card-vdom
+  .oraclejet-demo-card-flip-container.oraclejet-demo-card-flipped {
+  transform: rotateY(180deg);
+}
+
+oraclejet-demo-card-vdom
+  .oraclejet-demo-card-flip-container.oraclejet-demo-card-flipped
+  .oraclejet-demo-card-back-side {
+  /* IE11 workaround to show back side */
+  -ms-transform: rotateY(360deg);
+  z-index: 0;
+}
+
+oraclejet-demo-card-vdom .oraclejet-demo-card-avatar {
+  margin: auto;
+}
