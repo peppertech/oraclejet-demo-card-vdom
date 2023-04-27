@@ -42,7 +42,8 @@ oraclejet-demo-card-vdom .oraclejet-demo-card-avatar {
   padding: 0;
 }
 
-/* To ensure your classes are scoped correctly, we recommend scoping classes and prefixing class names with the composite name. */
+/* To ensure your classes are scoped correctly, we recommend scoping classes and 
+prefixing class names with the composite name. */
 oraclejet-demo-card-vdom .oraclejet-demo-card-front-side,
 oraclejet-demo-card-vdom .oraclejet-demo-card-back-side {
   position: absolute;

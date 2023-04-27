@@ -1,6 +1,5 @@
 import { ExtendGlobalProps, registerCustomElement } from "ojs/ojvcomponent";
 import { h, ComponentProps, ComponentType } from "preact";
-import { useState } from "preact/hooks";
 import componentStrings = require("ojL10n!./resources/nls/oraclejet-demo-card-vdom-strings");
 import "css!./oraclejet-demo-card-vdom-styles.css";
 import "ojs/ojavatar";
@@ -24,7 +23,7 @@ type Props = Readonly<{
 const flipCard = (event: any) => {
   if (
     event.type === "click" ||
-    (event.type === "keypress" && event.keyCode === 13)
+    (event.type === "keyup" && event.keyCode === 13)
   ) {
     // It's better to look for View elements using a selector
     // instead of by DOM node order which isn't guaranteed.
