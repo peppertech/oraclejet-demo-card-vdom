@@ -59,7 +59,7 @@ function OraclejetDemoCardVdomImpl({
       role="group"
       class="oraclejet-demo-card-flip-container"
       onClick={flipCard}
-      onKeyPress={flipCard}
+      onKeyUp={flipCard}
       aria-label={name + " Press Enter for more info."}>
       <div class="oraclejet-demo-card-front-side">
         <oj-avatar
