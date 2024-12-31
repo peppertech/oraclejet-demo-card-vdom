@@ -14,8 +14,8 @@
   },
   "keywords": [
     "OracleJET",
-    "VEOM",
-		"Preact"
+    "VDOM",
+    "Preact"
   ],
   "author": "John 'JB' Brock",
   "license": "UPL",
